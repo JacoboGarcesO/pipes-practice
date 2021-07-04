@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  activar = true;
   nombre = 'Capitán América';
   nombre2 = 'cApItAn aMeRiCa';
   personajes: string[] = ['Inronman', 'Spiderman', 'Thor', 'Loki', 'Groot'];
@@ -14,6 +15,7 @@ export class AppComponent {
   salario = 1234.5;
   fecha: Date = new Date();
   idioma = 'en';
+  videoUrl = 'https://www.youtube.com/embed/RZNNu2pO49g';
   promesa = new Promise<string>((resolve) => {
     setTimeout(() => {
       resolve('llegó');
@@ -28,6 +30,10 @@ export class AppComponent {
       casa: 20
     }
   };
+
+  toggleFormatPassword(): void {
+    this.activar = !this.activar;
+  }
 
   lenguajeEnglish(): void {
     this.idioma = 'en';
